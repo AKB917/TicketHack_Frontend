@@ -1,0 +1,14 @@
+{
+  "name": "tickethack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AKB917/TicketHack_Frontend.git",
+  "author": "AKB",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
