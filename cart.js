@@ -25,7 +25,7 @@ function updateRemoveFromCartEventListener() {
 }
 
 // Get cart
-fetch('http://localhost:3000/cart')
+fetch(`http://localhost:3000/cart`)
   .then(response => response.json())
   .then(data => {
     if (data.result) {
@@ -53,7 +53,7 @@ fetch('http://localhost:3000/cart')
 
 // Purchase
 document.querySelector('#purchase').addEventListener('click', function () {
-  fetch('http://localhost:3000/bookings', { method: 'PUT' })
+  fetch(`http://localhost:3000/bookings`, { method: 'PUT' })
     .then(response => response.json())
     .then(data => {
       data.result && window.location.assign('bookings.html');

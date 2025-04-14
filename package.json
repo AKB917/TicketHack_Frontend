@@ -9,6 +9,8 @@
     "start": "lite-server"
   },
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "moment": "^2.30.1",
+    "dotenv": "^16.0.1"
   }
 }
