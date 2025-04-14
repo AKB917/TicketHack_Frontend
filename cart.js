@@ -1,7 +1,10 @@
+
+let URL_BACK = "https://ticket-hack-backend-rose.vercel.app"
+
 function updateRemoveFromCartEventListener() {
   for (let i = 0; i < document.querySelectorAll('.delete').length; i++) {
     document.querySelectorAll('.delete')[i].addEventListener('click', function () {
-      fetch(`http://localhost:3000/cart/${this.id}`, { method: 'DELETE' })
+      fetch(`${URL_BACK}/cart/${this.id}`, { method: 'DELETE' })
         .then(response => response.json())
         .then(data => {
           if (data.result) {
@@ -25,7 +28,7 @@ function updateRemoveFromCartEventListener() {
 }
 
 // Get cart
-fetch(`http://localhost:3000/cart`)
+fetch(`${URL_BACK}/cart`)
   .then(response => response.json())
   .then(data => {
     if (data.result) {
@@ -53,9 +56,9 @@ fetch(`http://localhost:3000/cart`)
 
 // Purchase
 document.querySelector('#purchase').addEventListener('click', function () {
-  fetch(`http://localhost:3000/bookings`, { method: 'PUT' })
+  fetch(`${URL_BACK}/bookings`, { method: 'PUT' })
     .then(response => response.json())
     .then(data => {
       data.result && window.location.assign('bookings.html');
     });
-});
+})

@@ -1,10 +1,12 @@
+
+let URL_BACK = "https://ticket-hack-backend-rose.vercel.app"
 // Set date default value to today
 document.querySelector('#date').valueAsDate = new Date();
 
 function updateTripBookingEventListener() {
   for (let i = 0; i < document.querySelectorAll('.book').length; i++) {
     document.querySelectorAll('.book')[i].addEventListener('click', function () {
-      fetch(`http://localhost:3000/cart`, {
+      fetch(`${URL_BACK}/cart`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ tripId: this.id }),
@@ -27,7 +29,7 @@ document.querySelector('#search').addEventListener('click', function () {
     return;
   }
 
-  fetch(`http://localhost:3000/search/${departure}/${arrival}/${date}`)
+  fetch(`${URL_BACK}/search/${departure}/${arrival}/${date}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);

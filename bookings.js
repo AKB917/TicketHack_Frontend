@@ -1,7 +1,7 @@
-
+let URL_BACK = "https://ticket-hack-backend-rose.vercel.app"
 
 // Get bookings
-fetch(`http://localhost:3000/bookings`)
+fetch(`${URL_BACK}/bookings`)
   .then(response => response.json())
   .then(data => {
     if (data.result) {
